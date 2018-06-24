@@ -22,7 +22,14 @@ if (strpos($ip, '127.0.0') !== false) {
     echo $ip . " - localhost ipv4 access";
     die();
 }
-
+if (strpos($ip, '10') !== false) {
+    echo $ip . " - Private-use networks";
+    die();
+}
+if (strpos($ip, '192.168') !== false) {
+    echo $ip . " - Private-use networks";
+    die();
+}
 /**
  * Optimized algorithm from http://www.codexworld.com
  *
